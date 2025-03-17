@@ -5,7 +5,7 @@ metadata:
   name: fresher
 rules:
 - apiGroups: [""] # "" indicates the core API group
-  resources: ["pods"]
+  resources: ["pods", "deployments", "replicasets"]
   verbs: ["get", "watch", "list"]
 
 ---
