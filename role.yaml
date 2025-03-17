@@ -34,7 +34,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   # "namespace" omitted since ClusterRoles are not namespaced
-  name: fresher
+  name: junior
 rules:
 - apiGroups: [""]
   #
@@ -48,12 +48,12 @@ apiVersion: rbac.authorization.k8s.io/v1
 # This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
 kind: ClusterRoleBinding
 metadata:
-  name: fresher
+  name: junior
 subjects:
 - kind: User
   name: arun # "name" is case sensitive
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
-  name: fresher
+  name: junior
   apiGroup: rbac.authorization.k8s.io
